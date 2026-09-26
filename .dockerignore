@@ -1,0 +1,6 @@
+.git
+.tools
+examples
+README.md
+docker-compose.yml
+.dockerignore

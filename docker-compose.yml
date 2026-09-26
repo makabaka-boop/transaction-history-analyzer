@@ -1,0 +1,10 @@
+# txcheck is a batch (stdin -> stdout) auditor, not a long-running
+# server, so drive it with `docker compose run`:
+#
+#   docker compose build
+#   docker compose run --rm -T txcheck < examples/dirty-read.json
+#   docker compose run --rm -T -v "$PWD/examples:/data:ro" txcheck -i /data/conflict-cycle.json
+services:
+  txcheck:
+    build: .
+    image: txcheck:latest
